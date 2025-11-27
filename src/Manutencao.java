@@ -1,4 +1,4 @@
-public class Manutencao extends Servico {
+public class Manutencao extends ServicoBase implements Notificacao{
     private String descricaoDefeito;
     private boolean concluido;
 
@@ -18,5 +18,12 @@ public class Manutencao extends Servico {
         System.out.println("Iniciando manutenção do defeito " + this.descricaoDefeito +".");
         this.concluido = true;
         System.out.println("Manutenção concluída. Status: " + (this.concluido ? "Concluído" : "Pendente"));
+    }
+
+    //adição da interface do lab com override
+    @Override
+    public void enviarNotificacao(String mensagem){
+        System.out.println("SMS enviado para " + this.cliente + ": " + mensagem);
+
     }
 }

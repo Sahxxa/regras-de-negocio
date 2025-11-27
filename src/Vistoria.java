@@ -1,4 +1,4 @@
-public class Vistoria extends Servico {
+public class Vistoria extends ServicoBase implements Notificacao{
     private String relatorio;
 
     public Vistoria(int numSolicitacao, String cliente, String data, String relatorio) {
@@ -16,4 +16,6 @@ public class Vistoria extends Servico {
         System.out.println("Realizando vistoria.");
         System.out.println("Vistoria concluída para o cliente " + this.cliente + ".");
     }
+
+
 }

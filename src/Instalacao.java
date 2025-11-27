@@ -1,4 +1,4 @@
-public class Instalacao extends Servico {
+public class Instalacao extends ServicoBase implements Notificacao {
     private String equipamento;
 
     public Instalacao(int numSolicitacao, String cliente, String data, String equipamento) {
@@ -16,5 +16,12 @@ public class Instalacao extends Servico {
 
         System.out.println("Iniciando instalação do equipamento " + this.equipamento + ".");
         System.out.println("Instalação concluída para o cliente " + this.cliente+ ".");
+    }
+
+    //adição da interface do lab com override
+    @Override
+    public void enviarNotificacao(String mensagem){
+        System.out.println("Novo E-mail para " + this.cliente + ": " + mensagem);
+
     }
 }
