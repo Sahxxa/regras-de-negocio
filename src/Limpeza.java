@@ -1,4 +1,4 @@
-public class Limpeza extends Servico {
+public class Limpeza extends ServicoBase {
 
     private String tipoLimpeza;
 
