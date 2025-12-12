@@ -10,15 +10,12 @@ public class Main {
         Vistoria v1 = new Vistoria(103, "Construção", "2025-11-12", "Relatório OK.");
 
         Limpeza l1 = new Limpeza(104, "Escritório", "2025-11-13", "Limpeza Pós-obra");
-
-        // --- 2. Lista de Execução (Todos entram) ---
+        
         List<Servico> servicos = new ArrayList<>();
         servicos.add(i1);
         servicos.add(m1);
         servicos.add(v1);
         servicos.add(l1);
-
-        // ... adicione os casos de falha aqui se quiser testar validação ...
         //falhas
         servicos.add(new Instalacao(105, null, "2025-11-14", "Antena"));
         servicos.add(new Instalacao(106, "Loja", "2025-11-15", ""));
